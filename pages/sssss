@@ -1,0 +1,220 @@
+      <!-- <ul>
+              <li>
+                <div className={styles.logo}>
+                  <div className={styles.imgBx}>
+                    <div className={styles.logoFlex}>
+                      {!isNav && (
+                        <div>
+                          <Image
+                            src="/omratrade/el.png"
+                            width={130}
+                            height={50}
+                            alt="logo"
+                            onClick={() => router.push(`/`)}
+                          />
+                        </div>
+                      )}
+                      <div onClick={onNav}>
+                        <MenuBar height={22} width={22} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span onClick={() => setDropdown2(!dropdown2)}>
+                  <div className={styles.navFlex}>
+                    <div>
+                      <i className="fa fa-home"> </i>
+                    </div>
+                    {!isNav && <div> Merchant </div>}
+                    <div>
+                      <i className="fa fa-caret-down"> </i>
+                    </div>
+                  </div>
+                </span>
+
+                {dropdown2 ? (
+                  <div
+                    style={{
+                      opacity: dropdown2 ? 1 : 0,
+                    }}
+                    className={styles.dropdownBox3}
+                  >
+                    <ul>
+                      <li>
+                        <Link href="/admindashboard/all-merchant">
+                          <a>
+                            All Merchant
+                            <span style={{ color: "red" }}></span>
+                          </a>
+                        </Link>
+                      </li>
+
+                      <li>
+                        <Link href="/onboarding/dashboard/product/all-product/completed-leads">
+                          <a>
+                            Edit Merchant
+                            <span style={{ color: "red" }}>
+                              {/* {" " + totalLeadsCount} */}
+                            </span>
+                          </a>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                ) : null}
+              </li>
+
+              <li>
+                <div className={styles.navFlex}>
+                  <div>
+                    {" "}
+                    <i className="fa fa-home"> </i>
+                  </div>
+                  <div>
+                    <Link href="/admindashboard/category/add-category">
+                      Category
+                    </Link>{" "}
+                  </div>
+                  <div>
+                    <i className="fa fa-caret-down"> </i>
+                  </div>{" "}
+                </div>
+              </li>
+
+              <li>
+                <div className={styles.navFlex}>
+                  <div>
+                    {" "}
+                    <i className="fa fa-home"> </i>
+                  </div>
+                  <div>
+                    <Link href="/admindashboard/category/add-category">
+                      Subcategory
+                    </Link>{" "}
+                  </div>
+                  <div>
+                    <i className="fa fa-caret-down"> </i>
+                  </div>{" "}
+                </div>
+              </li>
+
+              <li>
+                <div className={styles.navFlex}>
+                  <div>
+                    <i className="fa fa-home"> </i>
+                  </div>
+                  <div>
+                    <Link href="/admindashboard/category/add-category">
+                      Subcategory
+                    </Link>
+                  </div>
+                  <div>
+                    <i className="fa fa-caret-down"> </i>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div className={styles.navFlex}>
+                  <div>
+                    <i className="fa fa-home"> </i>
+                  </div>
+                  <div>
+                    <Link href="/admindashboard/category/add-category">
+                      Subcategory
+                    </Link>
+                  </div>
+                  <div>
+                    <i className="fa fa-caret-down"> </i>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div className={styles.navFlex}>
+                  <div>
+                    {" "}
+                    <i className="fa fa-home"> </i>
+                  </div>
+                  <div>
+                    <Link href="/admindashboard/approval-listing">
+                      Approval Listing
+                    </Link>
+                  </div>
+                  <div>
+                    <i className="fa fa-caret-down"> </i>
+                  </div>{" "}
+                </div>
+              </li>
+              <li>
+                <div className={styles.navFlex}>
+                  <div>
+                    {" "}
+                    <i className="fa fa-home"> </i>
+                  </div>
+                  <div>
+                    <Link href="/admindashboard/approved-listing">
+                      Approved Listing
+                    </Link>
+                  </div>
+                  <div>
+                    <i className="fa fa-caret-down"> </i>
+                  </div>{" "}
+                </div>
+              </li>
+
+              <li>
+                <div
+                  className={styles.navFlex}
+                  onClick={() => setDropdown3(!dropdown3)}
+                >
+                  <div>
+                    <Banner />
+                  </div>
+                  <div>
+                    {" "}
+                    <span>Banners</span>{" "}
+                  </div>
+                  <div>
+                    <i className="fa fa-caret-down"> </i>
+                  </div>
+                </div>
+
+                {dropdown3 ? (
+                  <div
+                    style={{
+                      opacity: dropdown3 ? 1 : 0,
+                    }}
+                    className={styles.dropdownBox3}
+                  >
+                    <ul>
+                      <li>
+                        <Link href="/onboarding/dashboard/product/all-product/completed-leads">
+                          <a>
+                            Add Banner
+                            <span style={{ color: "red" }}></span>
+                          </a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/onboarding/dashboard/product/all-product/completed-leads">
+                          <a>
+                            Update Banner
+                            <span style={{ color: "red" }}></span>
+                          </a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/onboarding/dashboard/product/all-product/completed-leads">
+                          <a>
+                            All Banner
+                            <span style={{ color: "red" }}></span>
+                          </a>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                ) : null}
+              </li>
+            </ul> -->

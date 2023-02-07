@@ -1,0 +1,202 @@
+// css for old super admin
+
+// .mov {
+//   padding: 11px 0px;
+//   background: #f6f6f6;
+//   border-radius: 15px;
+//   width: 100%;
+//   margin: 0px 55px;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// css for new super admin
+.mov {
+  padding: 11px 0px;
+  background: #f7f9fc;
+  min-height: 100vh;
+}
+
+ul.box345 li {
+  position: relative;
+  width: 100%;
+  padding-left: 200px;
+  margin: 30px 14px;
+}
+.form_Box {
+  margin: 3px 7px;
+  padding: 4px 5px;
+}
+
+.Add_Button {
+  background-color: #002b6b !important;
+  color: white !important;
+  border-radius: 11px;
+  width: 100%;
+  border: none;
+  /* display: flex; */
+  /* justify-content: space-around; */
+  /* flex-direction: row; */
+  /* margin-left: 121px; */
+  height: 36px;
+}
+
+.subcatHeading {
+  text-align: center;
+  padding: 9px 0;
+  /* margin-top: 37px; */
+  font-weight: 500;
+}
+
+.inputBox {
+  width: 100%;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #888787;
+  height: 40px;
+  line-height: 2em;
+  padding: 5px 10px;
+  background: #fff;
+}
+.productLabel {
+  color: black;
+  background: #f6f6f6;
+}
+.dropdownBox {
+  width: 100%;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid #888787;
+  height: 40px;
+  line-height: 2em;
+  padding: 5px 10px;
+  background: #fff;
+}
+
+.mov {
+  h1 {
+    text-align: center;
+    padding: 8px 0 0 0;
+    /* margin-top: 37px; */
+    font-weight: 500;
+  }
+}
+
+// Table Format
+
+.tableMain {
+  display: flex;
+  gap: 38px;
+  padding: 20px 36px 16px;
+  white-space: nowrap;
+  background: aliceblue;
+}
+
+.tableMain3 {
+  display: flex;
+  gap: 38px;
+  padding: 20px 36px 16px;
+  white-space: nowrap;
+}
+.tableBoxx {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 36px 16px;
+}
+.arrowBox {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.arrowImage {
+  background: white;
+  /* color: white; */
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.topTable {
+  margin: auto 30px;
+  border: 1px solid #f7f9fc;
+  border-radius: 31px;
+  box-shadow: 0 2px 12px 0 rgb(208 221 240);
+}
+.downloadButton {
+  padding: 18px 22px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 11px;
+  background-color: #1476ff;
+  box-shadow: 0 4px 10px 0 rgb(2 87 251 / 20%);
+  -webkit-transition: background-color 300ms ease, color 300ms ease,
+    -webkit-transform 300ms ease;
+  transition: background-color 300ms ease, color 300ms ease,
+    -webkit-transform 300ms ease;
+  transition: background-color 300ms ease, transform 300ms ease,
+    color 300ms ease;
+  transition: background-color 300ms ease, transform 300ms ease,
+    color 300ms ease, -webkit-transform 300ms ease;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.143em;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  border: none;
+}
+
+.FirstSection {
+  padding: 10px 15px;
+  border-radius: 8px 8px 0 0;
+  color: white;
+  margin-bottom: inherit;
+  transition: 0.3s;
+  background: #00b0ee;
+  font-size: 14px;
+  li:hover {
+    background-color: burlywood;
+  }
+}
+
+.PackageButton {
+  padding: 10px 15px;
+
+  color: white;
+  margin-bottom: inherit;
+  transition: 0.3s;
+  background: #00b0ee;
+  font-size: 14px;
+}
+
+// .PackageButton:hover {
+//   background-color: #002b6b !important;
+// }
+
+.PackageButton:active {
+  background-color: red !important;
+}
+.priceSection1 {
+  display: flex;
+  /* justify-content: center; */
+  padding: 8px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.subscriptionButton {
+  padding: 10px 15px;
+
+  color: white;
+  margin-bottom: inherit;
+  transition: 0.3s;
+  background: #00b0ee;
+  font-size: 14px;
+}
+.subscriptionButton:active {
+  background-color: red !important;
+}

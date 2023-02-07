@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://marketplace.elaundry.co.in/
+
+# Sitemaps
+Sitemap: https://marketplace.elaundry.co.in/sitemap.xml

@@ -1,0 +1,33 @@
+.paginationFlex {
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.3s;
+
+  li {
+    padding: 3px 10px;
+    margin: 0 7px;
+    font-weight: 500;
+    color: black;
+    background: #f8f8f8;
+    border-radius: 50%;
+    font-size: 10px;
+  }
+
+  li:hover {
+    background-color: #00b0ee;
+    color: white;
+  }
+
+  a {
+    font-size: 14px;
+  }
+}
+
+.activeColor {
+  background-color: #002b6b;
+}
+
+.fontSize1 {
+  font-size: 10px;
+  text-align: center;
+}

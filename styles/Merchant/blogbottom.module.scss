@@ -1,0 +1,92 @@
+.container_width {
+    max-width: 1550px;
+    margin: 0px auto;
+  
+    // max-height: 144px;
+  }
+  .Flex_Section {
+    display: flex;
+  
+    gap: 41px;
+    padding: 12px 45px;
+    margin: 10px 0px 10px 0px !important;
+  
+    h3 {
+      font-size: 14px;
+      font-weight: 600;
+      display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    }
+  }
+  .paraBox {
+    color: white;
+    padding-left: 10px;
+  }
+  .textBorder {
+    // border: 1px solid #e0dfe4;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: 3px 3px 8px 1px #6d696908;
+    padding: 12px;
+    background: #f9f9f9;
+  }
+  .headingBox {
+    color: #002b6b !important;
+    font-weight: 500;
+    padding: 12px 45px;
+    margin: 10px 0px 10px 0px !important;
+    font-size: 24px;
+  }
+  
+  .textPadding {
+    padding: 5px;
+    padding: 0 12px;
+  }
+  .lineBox {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 13px;
+  }
+  
+  .readButton {
+    font-size: 13px;
+    height: 30px !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    background: #002b6b !important;
+    border: 1px #002b6b;
+    color: #ebebeb !important;
+    line-height: 28px !important;
+    width: 100;
+    margin: 5px 0;
+  }
+  
+  .readButton:hover {
+    background: white !important;
+    border: 1px solid #002b6b;
+    color: #002b6b !important;
+    font-weight: 500;
+  }
+  
+  .imageClass {
+    // border-radius: 5px;
+  }
+  
+  @media (max-width: 600px) {
+    .Flex_Section {
+      display: flex;
+      background-color: #f8f8f8;
+      /* gap: 123px; */
+      padding: 12px 14px !important;
+      margin-bottom: 30px;
+      max-width: 100%;
+      gap: 9px;
+      flex-direction: column;
+      font-size: 10px;
+    }
+  }
+  

@@ -1,0 +1,15 @@
+.addNewButton {
+  padding: 10px 15px;
+
+  color: white;
+  margin-bottom: inherit;
+  transition: 0.3s;
+  background: #223268;
+  font-size: 14px;
+  border: 0;
+}
+
+.addNewButton:hover {
+  background-color: #002b6b !important;
+  border: 0;
+}

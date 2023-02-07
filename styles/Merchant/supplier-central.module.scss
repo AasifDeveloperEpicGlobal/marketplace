@@ -1,0 +1,278 @@
+.aboutBox1 {
+  display: flex;
+  gap: 70px;
+}
+.main {
+  margin: 0px 60px;
+  position: relative;
+}
+.searchBar {
+  min-height: 59px;
+  margin-bottom: 0px;
+  padding: 8px 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cdcedb;
+
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgb(11 22 44 / 5%);
+  transition: box-shadow 300ms ease, color 300ms ease, border-color 300ms ease;
+  font-size: 14px;
+  line-height: 1.143em;
+  width: 100%;
+  min-width: 400px;
+}
+
+.midContainer {
+  background-color: #dbf4fd !important;
+  padding: 25px 0;
+  margin: 10px 0;
+}
+
+.iconMain {
+  display: grid;
+  padding: 43px 51px 0 51px;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+
+  h2 {
+    margin: 0;
+    color: #223268;
+    font-size: 19px;
+    text-align: center;
+  }
+
+  p {
+    color: #6a6a6a;
+  }
+}
+
+.imgSize {
+  object-fit: cover;
+}
+.inputfields {
+  min-height: 59px;
+  margin-bottom: 0px;
+  padding: 8px 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cdcedb;
+
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgb(11 22 44 / 5%);
+  transition: box-shadow 300ms ease, color 300ms ease, border-color 300ms ease;
+  font-size: 14px;
+  line-height: 1.143em;
+  width: 100%;
+  min-width: 226px;
+}
+.sellingButton {
+  background-color: #002b6b;
+  color: #fff !important;
+  border: none;
+  font-size: 18px;
+  padding: 19px 51px;
+}
+.sellingButton:hover {
+  background-color: #00b0ee;
+  color: #fff !important;
+  border: none;
+  font-size: 18px;
+  padding: 19px 51px;
+}
+.searchSection {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 3px 0;
+}
+
+.warningmessage {
+  position: absolute;
+  top: -29px;
+  left: 33%;
+  color: red;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.successmessage{
+  position: absolute;
+  top: -29px;
+  left: 41%;
+  color: #4BB543;
+  font-size: 16px;
+  font-weight: 500;
+
+}
+.heading {
+  h1 {
+    color: #002b6b;
+    margin: 10px 0;
+    font-size: 44px;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+.leftside {
+  flex: 0.5 1;
+  padding: 34px 0;
+  word-spacing: 3px;
+  word-spacing: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    font-size: 2rem;
+    margin: 0;
+    line-height: 3rem;
+  }
+
+  h1 {
+    color: #002b6b;
+    margin: 0;
+    font-size: 57px;
+  }
+
+  h3 {
+    font-size: 29px;
+    font-weight: 400;
+    margin: 19px 0;
+    color: #474747;
+  }
+  p {
+    line-height: 1.5rem;
+    color: #8c8c8c;
+    font-size: 17px;
+  }
+  word-spacing: 3px;
+}
+.rightside {
+  flex: 0.5;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.aboutBox2 {
+  display: flex;
+  gap: 20px;
+}
+.leftside2 {
+  flex: 0.5 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.bannerTop1 {
+  position: relative;
+  margin: 40px 5px;
+  .textBox {
+    position: absolute;
+    right: 121px;
+    top: 127px;
+    font-size: 28px;
+    color: white;
+
+    line-break: normal;
+
+    padding: 17px;
+  }
+}
+.emailvalidationmessage {
+  color: red;
+  font-size: 12px;
+  text-align: center;
+}
+.container_width {
+  max-width: 1550px;
+  margin: 0px auto;
+}
+.imageBox {
+  margin-top: 20px;
+  border-top: 1px solid rgb(112 147 202 / 32%);
+  padding: 12px 0;
+}
+@media (max-width: 600px) {
+  .aboutBox1 {
+    flex-direction: column;
+  }
+
+  .aboutBox2 {
+    flex-direction: column-reverse;
+  }
+
+  .main {
+    margin: 20px 20px;
+  }
+
+  .leftside {
+    padding: 10px 0;
+  }
+
+  .leftside {
+    h3 {
+      margin: 11px 0;
+    }
+  }
+  .leftside {
+    h1 {
+      font-size: 25px;
+    }
+  }
+
+  .leftside {
+    h2 {
+      font-size: 15px;
+      margin: 0;
+      line-height: 2rem;
+    }
+  }
+
+  .heading {
+    h1 {
+      font-size: 25px;
+    }
+  }
+
+  .bannerTop1 {
+    .textBox {
+      position: absolute;
+      right: 0px;
+      top: 24px;
+      font-size: 10px;
+      color: white;
+      /* line-break: normal; */
+      /* padding: 17px; */
+    }
+  }
+
+  .iconMain {
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sellingButton {
+    background-color: #002b6b;
+    color: #fff !important;
+    border: none;
+    font-size: 12px;
+    padding: 13px 11px;
+    white-space: nowrap;
+  }
+
+  .searchBar {
+    min-height: 0;
+    margin-bottom: 0px;
+    padding: 11px 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cdcedb;
+    background-color: #fff;
+    box-shadow: 0 2px 12px 0 rgb(11 22 44 / 5%);
+    transition: box-shadow 300ms ease, color 300ms ease, border-color 300ms ease;
+    font-size: 14px;
+    line-height: 1.143em;
+    width: 100%;
+    min-width: 200px;
+  }
+}

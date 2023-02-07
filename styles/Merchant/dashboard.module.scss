@@ -1,0 +1,117 @@
+.container_width {
+  max-width: 1550px;
+  margin: 0px auto;
+}
+
+.heading_box {
+  justify-content: center;
+
+  color: #002b6b;
+  font-size: 30px;
+  margin-top: 80px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.flex_box {
+  display: flex;
+
+  justify-content: center;
+  height: 132px;
+}
+
+.flex_box1 {
+  height: 104px;
+  width: 228px;
+  background-color: red;
+  margin: 3px;
+  border-radius: 5px;
+  /* padding: 3px 3px; */
+  display: flex;
+  justify-content: center;
+  line-height: 67px;
+  color: white;
+}
+
+.flex_box2 {
+  height: 104px;
+  width: 228px;
+  background-color: #00b0ee;
+  margin: 3px;
+  border-radius: 5px;
+  /* padding: 3px 3px; */
+  display: flex;
+  justify-content: center;
+  line-height: 67px;
+  color: white;
+}
+
+.flex_box3 {
+  height: 104px;
+  width: 228px;
+  background-color: #002b6b;
+  margin: 3px;
+  border-radius: 5px;
+  /* padding: 3px 3px; */
+  display: flex;
+  justify-content: center;
+  line-height: 67px;
+  color: white;
+  transition: all 100ms ease-in;
+}
+
+.heading_box {
+  justify-content: center;
+  color: #002b6b;
+  font-size: 28px;
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+  padding: 20px;
+}
+
+.gridbox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.flex_box3:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+.flex_box2:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+.flex_box1:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
+// .admin {
+//   margin-left: 325px;
+//   margin-top: 144px;
+// }
+
+@media (max-width: 500px) {
+  h1.dashboard_heading_box__uw5s7 {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  h1.dashboard_heading_box__uw5s7 {
+    display: none;
+  }
+}
+@media (max-width: 380px) {
+  h1.dashboard_heading_box {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading_box {
+    display: none;
+  }
+}

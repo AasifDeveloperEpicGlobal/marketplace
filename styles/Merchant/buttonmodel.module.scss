@@ -1,0 +1,57 @@
+.inputFlex {
+  display: flex;
+  padding: 15px 0;
+  justify-content: center;
+  /* width: 100%; */
+  gap: 70px;
+
+  h3 {
+    margin: 0;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.143em;
+  }
+  div {
+    position: relative;
+    label {
+      position: absolute;
+      padding-left: 5px;
+      margin-left: 20px;
+      background-color: white;
+      margin-top: -8px;
+      font-size: 14px;
+      color: #999 !important;
+      transition: all 200ms;
+      text-shadow: var(--box-shadow);
+    }
+  }
+}
+
+.inputlabel {
+  position: absolute;
+  left: 14px;
+  bottom: 37px;
+  padding: 0.1rem 0.5rem;
+  white-space: nowrap;
+  background: white;
+  line-height: 1.2;
+  color: #999 !important;
+  font-size: 14px;
+}
+.inputForm {
+  min-height: 45px;
+  margin-bottom: 0px;
+  padding: 8px 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #cdcedb;
+  border-radius: 11px;
+  background-color: #fff;
+  box-shadow: 0 2px 12px 0 rgb(11 22 44 / 5%);
+  transition: box-shadow 300ms ease, color 300ms ease, border-color 300ms ease;
+  font-size: 14px;
+  line-height: 1.143em;
+  width: 100%;
+  min-width: 270px;
+}

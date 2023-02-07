@@ -1,0 +1,168 @@
+.aboutBox1 {
+  display: flex;
+  gap: 70px;
+}
+.main {
+  margin: 0px 60px;
+}
+
+.heading {
+  h1 {
+    color: #002b6b;
+    margin: 0;
+    font-size: 57px;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+.bannerTop {
+  position: relative;
+}
+.topHeading {
+  position: absolute;
+  top: 30%;
+  color: white;
+  text-align: center;
+  left: 5%;
+  font-size: 44px;
+  font-weight: 500;
+}
+
+.topHeading1 {
+  position: absolute;
+  bottom: 27px;
+  color: white;
+  text-align: center;
+  left: 10%;
+  font-size: 17px;
+  font-weight: 500;
+}
+.leftside {
+  flex: 0.5 1;
+  padding: 34px 0;
+  word-spacing: 3px;
+  word-spacing: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    font-size: 2rem;
+    margin: 0;
+    line-height: 3rem;
+  }
+
+  h1 {
+    color: #002b6b;
+    margin: 0;
+    font-size: 57px;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 29px;
+    font-weight: 400;
+    margin: 19px 0;
+    color: #474747;
+  }
+  p {
+    line-height: 1.5rem;
+    color: #8c8c8c;
+    font-size: 17px;
+  }
+  word-spacing: 3px;
+}
+.rightside {
+  flex: 0.5;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.aboutBox2 {
+  display: flex;
+  gap: 20px;
+}
+.leftside2 {
+  flex: 0.5 1;
+  display: flex;
+  align-items: flex-end;
+  /* justify-content: flex-end; */
+}
+.container_width {
+  max-width: 1550px;
+  margin: 0px auto;
+}
+.imageBox {
+  margin-top: 20px;
+  border-top: 1px solid rgb(112 147 202 / 32%);
+  // padding: 20px 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .aboutBox1 {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .rightside {
+    justify-content: normal;
+  }
+
+  .aboutBox2 {
+    display: flex;
+
+    flex-direction: column-reverse;
+  }
+
+  .main {
+    margin: 0px 20px;
+  }
+}
+@media (max-width: 600px) {
+  .aboutBox1 {
+    flex-direction: column;
+  }
+
+  .aboutBox2 {
+    flex-direction: column-reverse;
+  }
+
+  .main {
+    margin: 20px 20px;
+  }
+
+  .leftside {
+    padding: 10px 0;
+    font-size: 20px;
+  }
+
+  .leftside {
+    h3 {
+      margin: 11px 0;
+    }
+  }
+  .leftside {
+    h1 {
+      font-size: 30px;
+    }
+  }
+
+  .leftside {
+    h2 {
+      font-size: 15px;
+      margin: 0;
+      line-height: 2rem;
+    }
+  }
+
+  .heading {
+    h1 {
+      font-size: 25px;
+    }
+  }
+
+  .topHeading {
+    font-size: 17px;
+  }
+}

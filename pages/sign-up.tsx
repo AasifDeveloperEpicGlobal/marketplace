@@ -1,0 +1,323 @@
+import { useCallback, useEffect, useState } from "react";
+
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import Router, { useRouter } from "next/router";
+import toast, { Toaster } from "react-hot-toast";
+import { useRef } from "react";
+
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
+import styles from "../styles/Merchant/signup.module.scss";
+import { isMatch } from "lodash";
+import {
+  useLogin,
+  useRegister,
+  useSendSmsForPayment,
+  useSendSmsForRegistration,
+} from "networkAPI/queries";
+import { setUser } from "redux/slices/userSlice";
+import Cancel from "components/svg-icons/cancel";
+// import { ValidationError } from "yup";
+
+const SignUp: NextPage = () => {
+  const router = useRouter();
+  const ref = useRef();
+  const dispatch = useAppDispatch();
+
+  const [email, setEmail] = useState<string>("");
+  const [mobile_no, setMobile_no] = useState<string>("");
+  const [mobileno, setMobileno] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [confirmPassword, setConfirmPassword] = useState<string>("");
+  const [isMatched, setIsMatched] = useState<boolean>(true);
+  const [role, setRole] = useState<string>("Admin");
+
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const test = useAppSelector((state) => state);
+
+  const { mutate, isLoading, isSuccess,data} = useRegister();
+  const { mutate: login } = useLogin();
+  const { mutate: smsMutate, isSuccess: isSuccess2 } =
+    useSendSmsForRegistration();
+
+    console.log("testtestinffffffffffffffffffffffffffffff",data)
+
+  const handleLogin = useCallback(
+    (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+
+      if (password !== confirmPassword) {
+        return setErrorMessage("Password and Confirm Pasword does not Match");
+      }
+      mutate(
+        {
+          email,
+          mobile_no,
+          password,
+          role,
+        },
+        {
+          onSuccess: (data: any) => {
+            console.log("testdata",data)
+            if(data?.success){
+
+            
+            dispatch(
+              setUser({
+                user: {
+                  email,
+                  mobile_no,
+                  password,
+                  role,
+                },
+                isAuthenticated: true,
+              })
+            );
+
+            login(
+              {
+                email,
+                password,
+              },
+              {
+                onSuccess: (data: any) => {
+                  smsMutate({
+                    mobileno: mobile_no,
+                    vendors_name: email,
+
+                    type: "registration",
+                  });
+
+                  dispatch(
+                    setUser({
+                      user: data.user,
+                      token: data.token,
+                      isAuthenticated: true,
+                    })
+                  );
+
+                  // toast.success(data?.message);
+                  // if (data.user.role === "Admin") {
+                  //   Router.push(`/onboarding/dashboard`);
+                  // } else if (data.user.role === "SuperAdmin") {
+                  //   Router.push(`/super-admin`);
+                  // } else {
+                  //   Router.push(`/`);
+                  // }
+                   toast.success(data?.message);
+           
+                },
+              }
+            )
+            Router.push("/onboarding/profile");
+          
+          }
+            if(!data?.success){
+              toast.error(data?.message);
+
+            };
+
+            // toast.success("created Successfully");
+            
+          },
+          onError:(data:any)=>{
+            console.log("hello baba bababa",data)
+            toast.error(data?.message);
+
+          }
+        }
+      );
+      // await axiosInstance.post("/api/logout")
+    },
+    [
+      password,
+      confirmPassword,
+      mutate,
+      email,
+      mobile_no,
+      role,
+      dispatch,
+      login,
+      smsMutate,
+    ]
+  );
+
+  const [showPassword, setshowPassword] = useState(false);
+
+  const showPasswordHandler = useCallback(() => {
+    setshowPassword(!showPassword);
+  }, [showPassword]);
+
+  //For Email validation starts
+
+  const [message, setMessage] = useState("");
+
+  const emailValidation = () => {
+    const regEx = /^([a-zA-Z0-9\.-_]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})$/;
+    if (!regEx.test(email) && email !== "") {
+      setMessage("Enter valid Email Id");
+    } else {
+      setMessage("");
+    }
+  };
+  const handleOnChange = (e: any) => {
+    setEmail(e.target.value);
+  };
+
+  //For Email validation ends
+
+  return (
+    <div className="">
+      {/* <Toaster position="bottom-center" /> */}
+
+      <Head>
+        <title>Create Next App</title>
+        <meta name="description" content="Generated by create next app" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
+      <div className={styles.container_width}>
+        <section className={styles.SectionBox}>
+          <div className={styles.imgBx}>
+            {/* <img
+              src="/omratrade/leftsignin.png"
+              className={styles.img_signup}
+              alt="girl"
+              onClick={() => router.push(`/`)}
+            /> */}
+          </div>{" "}
+          <div className={styles.loginbottom}>
+            <div className={styles.contentBx}>
+              <div className={styles.formBx}>
+                <h2>Sign Up</h2>
+                <form onSubmit={handleLogin}>
+                  <div>
+                    <div className={styles.loginmessage}>
+                      <span>Email id</span>
+                      <span className={styles.emailvalidationmessage}>
+                        {message}
+                      </span>
+                    </div>
+                    <input
+                      className={styles.InputBox}
+                      type="email"
+                      id="email"
+                      onChange={(e) => setEmail(e.target.value)}
+                      value={email}
+                      required
+                    />
+                  </div>
+                  <div>
+                    <span>Mobile No:</span>
+                    <input
+                      className={styles.InputBox}
+                      type="tel"
+                      id="mobile"
+                      onChange={(e) => setMobile_no(e.target.value)}
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <Toaster />
+                    <span>Password</span>
+                    <div className={styles.passwordbox}>
+                      <input
+                        className={styles.InputBox}
+                        type={showPassword ? "text" : "password"}
+                        name=""
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                      />
+                      <div
+                        className={` ${styles.passwordshowicon} ${styles.passwordshow} `}
+                      ></div>
+                      <div
+                        onClick={showPasswordHandler}
+                        className={` ${styles.passwordhideicon} ${styles.passwordshow} `}
+                      >
+                        {showPassword ? (
+                          <Image
+                            src="/svg/eye-slash-solid.svg"
+                            width={20}
+                            height={20}
+                            priority={true}
+                            className={styles.passwordhideiconn}
+                            alt="f"
+                          ></Image>
+                        ) : (
+                          <Image
+                            src="/svg/eye-solid.svg"
+                            width={20}
+                            height={20}
+                            priority={true}
+                            className={styles.passwordshowiconn}
+                            alt="f"
+                          ></Image>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <span>Confirm Password</span>
+                    <div className={styles.passwordbox}>
+                      <input
+                        className={styles.InputBox}
+                        type={showPassword ? "text" : "password"}
+                        name=""
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                      />
+                      <div
+                        className={` ${styles.passwordshowicon} ${styles.passwordshow} `}
+                      ></div>
+                      <div
+                        onClick={showPasswordHandler}
+                        className={` ${styles.passwordhideicon} ${styles.passwordshow} `}
+                      >
+                        {showPassword ? (
+                          <Image
+                            src="/svg/eye-slash-solid.svg"
+                            width={20}
+                            height={20}
+                            className={styles.passwordhideiconn}
+                          ></Image>
+                        ) : (
+                          <Image
+                            src="/svg/eye-solid.svg"
+                            width={20}
+                            height={20}
+                            className={styles.passwordshowiconn}
+                          ></Image>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  {errorMessage && (
+                    <p style={{ fontSize: 12, color: "red" }}>{errorMessage}</p>
+                  )}
+                  <input
+                    type="submit"
+                    value="Sign up"
+                    name=""
+                    // disabled={isMatched}
+                    className={styles.buttonsection}
+                    onClick={emailValidation}
+                    // onClick={() => {
+                    //   alert("Login");
+                    // }}
+                  />
+                </form>
+              </div>
+            </div>{" "}
+            <div onClick={() => router.push(`/`)} className={styles.backtohome}>
+              <Cancel />
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+export default SignUp;

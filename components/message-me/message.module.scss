@@ -1,0 +1,381 @@
+$white: #f6f7fa;
+$primary: #1d99f2;
+$prwhite: #fff;
+$gray: #dadada;
+$mobile: 576px;
+$tab: 991px;
+
+.popupContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("/omratrade/banner.jpg");
+    background-size: cover;
+    backdrop-filter: blur(20px);
+  }
+}
+
+.formsignup {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.formsignup label {
+  display: block;
+  width: 100%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #979797;
+  margin-bottom: 8px;
+}
+
+.inputform {
+  width: 100%;
+  font-family: "Poppins";
+  background: #f6f7fa;
+  border: 1px solid #dadada;
+  box-sizing: border-box;
+  border-radius: 6px;
+  height: 48px;
+  padding: 11px 16px;
+  outline: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #6c768c;
+
+  &:placeholder {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #6c768c;
+  }
+}
+
+.inputform:focus {
+  outline: 2px solid $primary;
+}
+
+.modelboxpopup {
+  background: #fff;
+  padding: 9px 25px;
+ 
+  border-radius: 6px;
+  width: 588px;
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+  overflow: hidden;
+  overflow: overlay;
+  height: 90vh;
+  overflow-x: hidden;
+}
+
+.modelfooter {
+  display: block;
+  background: #f6f7fa;
+  margin: 46px -42px -11px -42px;
+  padding: 32px 40px;
+  border-radius: 0px 0px 6px 6px;
+}
+
+.modelheader {
+  width: 100%;
+  position: relative;
+
+  .iconadd {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+
+  h4 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 0px;
+    text-align: center;
+    display: block;
+  }
+}
+
+.modelform {
+  display: block;
+
+  .inputbox {
+    margin-bottom: 16px;
+
+    label {
+      position: relative;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      color: #979797;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+  }
+
+  .onbordfooter {
+    width: auto;
+  }
+
+  .inputform {
+    margin-bottom: 0px;
+  }
+
+  textarea.inputform {
+    height: 128px;
+    resize: none;
+  }
+}
+
+/* tab Design style */
+ul.modelpoptabstyle {
+  padding: 12px;
+  flex-wrap: nowrap;
+  gap: 26px;
+  justify-content: center;
+  // margin-top: 32px;
+  // margin-bottom: 33px;
+  font-style: normal;
+  font-weight: 600;
+  position: relative;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #6c768c;
+}
+
+.linestrip {
+  border-bottom: 1px solid #dadada;
+  height: 1px;
+  width: 100%;
+}
+
+ul.modelpoptabstyle li a {
+  font-style: normal;
+  font-weight: 600;
+  position: relative;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #6c768c;
+}
+
+ul.modelpoptabstyle li.active a:before,
+ul.modelpoptabstyle li:hover a:before {
+  background: #2ba0f3;
+}
+
+ul.modelpoptabstyle li a:before {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: -8px;
+  background: #fff0;
+  height: 2px;
+}
+
+ul.modelpoptabstyle li.active a,
+ul.modelpoptabstyle li:hover a {
+  color: #08070c;
+}
+
+p.modelsubheading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #6c768c;
+  margin-top: 32px;
+  margin-bottom: 30px;
+}
+
+/* second model box */
+ul.dateinput {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 16px;
+}
+
+ul.dateinput li.date,
+ul.dateinput li.mth {
+  width: 30%;
+}
+
+ul.dateinput li.yar {
+  width: 40%;
+}
+
+/* third Model Box Start */
+.requirementstylebox {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 16px;
+
+  .requirementstyle {
+    position: relative;
+    padding-left: 56px;
+    background: #ffffff;
+    border: 1px solid #dadada;
+    border-radius: 6px;
+    width: 100%;
+    padding-top: 22px;
+    padding-bottom: 21px;
+    cursor: pointer;
+
+    .checkicon {
+      position: absolute;
+      left: 27px;
+      width: 20px;
+      top: 25px;
+      height: 20px;
+    }
+  }
+
+  .requiremetheading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #08070c;
+    margin-bottom: 5px;
+  }
+
+  .requirementcontent {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #6c768c;
+  }
+}
+
+a.createrequirementbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1d99f2;
+  margin-bottom: -18px;
+  margin-top: 26px;
+}
+
+/* third Model Box End */
+
+// fourth Model Box Start
+.sendimage {
+  text-align: center;
+  margin-top: 44px;
+}
+
+.middlesection {
+  background: #f6f7fa;
+  border-radius: 6px;
+  margin-top: 62px;
+  padding: 29px 34px;
+  margin-bottom: -20px;
+  .style55 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .content {
+    padding-top: 24px;
+    border-top: 1px solid #dadada;
+    margin-top: 25px;
+  }
+  .content {
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.02em;
+      color: #6c768c;
+    }
+  }
+  .imagewithtext {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .getmore {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #08070c;
+  }
+}
+.bluebgbtn {
+  background-color: #0052cc;
+  // color: white;
+  // padding: 6px 18px;
+  // font-weight: 500;
+  // font-size: 16px;
+  // line-height: 16px;
+  // font-family: 'Poppins';
+}
+.continuebutton {
+  background-color: #002b6b;
+  color: white;
+  padding: 10px 21px;
+  margin-left: 395px;
+  margin-top: -64px;
+  border-radius: 7px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "Poppins";
+  /* margin-right: 97px; */
+  width: 110px;
+  border: none;
+}
+.continuebutton:hover {
+  background-color: #002b6b;
+  color: white;
+
+  border: none !important;
+}
+// fourth Model Box END

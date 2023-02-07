@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  padding: 0;
+  //   width: 100%;
+}
+
+.container span {
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.cardCarousel {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  width: 100% !important;
+}
+
+.leftButton {
+  color: cornflowerblue;
+  font-size: 2em;
+  padding: 5px;
+}
+
+.rightButton {
+  color: cornflowerblue;
+  font-size: 2em;
+  padding: 5px;
+}
+
+.cardSummary {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(80px, 1fr));
+  grid-gap: 0px;
+}
+
+.cardSummary div {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+  border: 2px solid red;
+  /* opacity: 0; 
+  position: absolute;
+  transform: scale(1) translateX(40px); */
+}
+
+.cardSummary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  transform: scale(1) translateX(40px);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.carouselDefault {
+  //   width: 250px;
+  height: 500px;
+  margin: 20px;
+}
+.card.active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  z-index: 3;
+}
+
+.card.next {
+  opacity: 0.5;
+  z-index: 2;
+  transform: scale(0.9) translateX(80px);
+}
+
+.card.prev {
+  transform: scale(0.9) translateX(-80px);
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.card.inactive {
+  transform: scale(1) translateX(0px);
+  z-index: 1;
+  opacity: 0;
+}
+
+.card.noTranslate {
+  transform: scale(1) translateX(0px);
+  z-index: 1;
+  opacity: 0;
+}

@@ -1,0 +1,135 @@
+.container {
+  display: flex;
+  margin-top: 10px;
+
+  // height: 415px;
+  // margin-bottom: 36px;
+}
+
+/* PRODUCT CARD */
+
+.productcard {
+  background-color: #f5f6fa;
+  border-radius: 10px;
+  color: #2f3640;
+  margin: 0 2em;
+  transition: all linear 0.2s;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.productcard:hover,
+.productcard:active {
+  box-shadow: 0.2em 0.5em 0.5em rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+.productimg {
+  border-radius: 10px 10px 0px 0px;
+  height: 150px;
+  max-width: 100%;
+}
+
+.imgone {
+  background-image: url(https://thumbs.dreamstime.com/b/concept-agile-software-development-concept-agile-software-development-107923572.jpg);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.imgtwo {
+  background-image: url(https://www.dahu.bio/images/photos/agriculture/organic-product.jpg);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.imgthree {
+  background-image: url(https://youngwonks.s3.amazonaws.com/Blogs/cabinet);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.imgone,
+.imgtwo,
+.imgthree {
+  background-size: cover;
+  background-position: center;
+}
+
+.producttext {
+  padding: 1em;
+  text-align: center;
+}
+
+.productcart button {
+  border: 0;
+  border-radius: 0 0 10px 10px;
+  color: #f5f6fa;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 1em;
+  text-transform: uppercase;
+  transition: all linear 0.3s;
+  width: 100%;
+}
+
+.productcart button:hover {
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+/* color */
+.productcard h3 {
+  color: #002b6b;
+}
+
+.productcard button {
+  background-color: #002b6b;
+}
+
+.productdiv {
+  // margin-bottom: 70px;
+
+  // background: #F5F5F5;
+  // padding-bottom: 40px;
+  // margin-top:80px;
+  // padding: 4px 15px;
+}
+
+// .productdiv33 {
+//   margin-top: 61px;
+// }
+
+/* media queries */
+@media screen and (max-width: 860px) {
+  .container {
+    display: grid;
+    grid-column-templates: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .productcard {
+    margin: 1.5em;
+  }
+}
+
+.container_width {
+  max-width: 1550px;
+  margin: 0px auto;
+}
+
+@media (max-width: 600px) {
+  .heading_section3 {
+    color: #002b6b !important;
+    font-weight: 500;
+    font-size: larger;
+  }
+
+  .container {
+    display: flex;
+    /* margin-top: 40px; */
+    /* margin-top: 52px; */
+  }
+
+  .productdiv33 {
+    margin-top: 0px;
+  }
+}

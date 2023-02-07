@@ -1,0 +1,124 @@
+// .product_color{
+
+//     background-color: #E5CECF;
+//     height: 80vh;
+// }
+
+// .product_background{
+
+//     background-color:#D5B2B5;
+//     height: 50vh;
+//     width: 40vh;
+//     position: relative;
+// }
+
+.container {
+  display: flex;
+  margin-top: 40px;
+  height: 300px;
+  // background-color: #E5CECF;
+}
+
+/* PRODUCT CARD */
+
+.productcard {
+  // background-color: #f5f6fa;
+  border-radius: 10px;
+  color: #2f3640;
+  margin: 0 2em;
+  transition: all linear 0.2s;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+// .cardproduct:hover,
+// .cardproduct:active {
+//   box-shadow: .2em .5em .5em rgba(0, 0, 0, 0.4);
+//   transform: scale(1.1);
+// }
+
+.productimg {
+  border-radius: 10px 10px 0px 0px;
+  height: 150px;
+  max-width: 100%;
+  background: #f5f5f5 !important;
+
+  img {
+  }
+}
+
+.productimagesrc {
+  background: #f5f5f5 !important;
+}
+
+.imgone {
+  background-image: url(https://thumbs.dreamstime.com/b/concept-agile-software-development-concept-agile-software-development-107923572.jpg);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.imgtwo {
+  background-image: url(https://www.dahu.bio/images/photos/agriculture/organic-product.jpg);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.imgthree {
+  background-image: url(https://youngwonks.s3.amazonaws.com/Blogs/cabinet);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.imgone,
+.imgtwo,
+.imgthree {
+  background-size: cover;
+  background-position: center;
+}
+
+.producttext {
+  padding: 1em;
+  text-align: center;
+  background: white;
+}
+
+.productcart button {
+  border: 0;
+  border-radius: 0 0 10px 10px;
+  color: #f5f6fa;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 1em;
+  // text-transform: uppercase;
+  transition: all linear 0.3s;
+  width: 100%;
+  font-size: 16px;
+}
+
+.productcart button:hover {
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+/* color */
+.productcard h3 {
+  color: #002b6b;
+}
+
+.productcard button {
+  background-color: #d5b2b5;
+  font-weight: 700;
+  color: #a24a4e;
+}
+
+/* media queries */
+@media screen and (max-width: 860px) {
+  .container {
+    display: grid;
+    grid-column-templates: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .productcard {
+    margin: 1.5em;
+  }
+}

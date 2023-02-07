@@ -1,0 +1,329 @@
+.container {
+  display: flex;
+  margin-top: 40px;
+  margin-top: 52px;
+  // height: 415px;
+  // margin-bottom: 36px;
+}
+
+.banner3 {
+  width: 100%;
+}
+/* PRODUCT CARD */
+
+.productcard {
+  background-color: #f5f6fa;
+  border-radius: 10px;
+  color: #2f3640;
+  margin: 0 2em;
+  transition: all linear 0.2s;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.productcard:hover,
+.productcard:active {
+  box-shadow: 0.2em 0.5em 0.5em rgba(0, 0, 0, 0.4);
+  transform: scale(1.1);
+}
+
+.productimg {
+  border-radius: 10px 10px 0px 0px;
+  height: 150px;
+  max-width: 100%;
+}
+
+.imgone {
+  background-image: url(https://thumbs.dreamstime.com/b/concept-agile-software-development-concept-agile-software-development-107923572.jpg);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.imgtwo {
+  background-image: url(https://www.dahu.bio/images/photos/agriculture/organic-product.jpg);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.imgthree {
+  background-image: url(https://youngwonks.s3.amazonaws.com/Blogs/cabinet);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.imgone,
+.imgtwo,
+.imgthree {
+  background-size: cover;
+  background-position: center;
+}
+
+.producttext {
+  padding: 1em;
+  text-align: center;
+}
+
+.productcart button {
+  border: 0;
+  border-radius: 0 0 10px 10px;
+  color: #f5f6fa;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 1em;
+  text-transform: uppercase;
+  transition: all linear 0.3s;
+  width: 100%;
+}
+
+.productcart button:hover {
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+/* color */
+.productcard h3 {
+  color: #002b6b;
+}
+
+.productcard button {
+  background-color: #002b6b;
+}
+
+.flexSection1 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-direction: column;
+  // background: rgb(81 196 230 / 4%);
+  border: 1px solid #5dc5e9;
+  border-radius: 7px;
+  padding: 20px 42px;
+  min-width: 276px;
+  min-height: 174px;
+  margin-top: 10px;
+  // box-shadow: 2px 3px #00000082;
+
+  box-shadow: 0px 2px 10px #979797ad;
+  transition: all 0.3s ease-in-out;
+}
+// .bgImage {
+//   background-image: url(/omratrade/waves.png);
+//   background-position: 814px 626px;
+//   opacity: 0.9;
+// }
+.flexSection {
+  display: flex;
+  /* gap: 39px; */
+  padding-right: 5px;
+  padding-left: 5px;
+  justify-content: space-between;
+  // background-image: url(/omratrade/waves.png);
+  // background-position: 437px 511px;
+  h2 {
+    font-weight: 500;
+    color: #504f4f;
+    font-size: 18px;
+    padding: 0px;
+    margin: 10px 0px;
+  }
+}
+
+.section34 {
+  margin: 30px 0px;
+}
+
+// .smallImage {
+//   background-color: rgba(0, 0, 0, 0.1607843137);
+//   border-radius: 50%;
+//   padding: 7px 8px 4px 7px;
+// }
+
+.topHeading {
+  color: #707070;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.divColor {
+  background-color: #002b6b;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  gap: 286px;
+  align-items: center;
+
+  h4 {
+    font-size: 23px;
+    padding: 0px;
+    font-weight: 200;
+    margin-top: 0px;
+  }
+}
+
+.readButton {
+  background: #002b6b;
+  color: white;
+  border: 2px solid white;
+  padding: 9px 34px;
+  display: flex;
+  gap: 13px;
+  align-items: center;
+}
+
+.readButton:hover {
+  background: white;
+  color: #002b6b;
+}
+.productdiv33 {
+  margin-top: 30px;
+}
+.bannerImage {
+  position: relative;
+  margin: 30px 0px;
+}
+
+.absolutePart {
+  position: absolute;
+  top: 140px;
+  max-width: 40%;
+  left: 30px;
+
+  h1 {
+    font-size: 47px;
+    color: #002b6b;
+    font-weight: 500;
+  }
+}
+
+.readButton2 {
+  background: white;
+  color: #002b6b;
+  border: 2px solid #002b6b;
+  padding: 9px 34px;
+  /* display: flex; */
+  gap: 13px;
+  align-items: center;
+}
+.readButton2:hover {
+  background: #002b6b;
+  color: white;
+}
+
+/* media queries */
+@media screen and (max-width: 860px) {
+  .container {
+    display: grid;
+    grid-column-templates: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .productcard {
+    margin: 1.5em;
+  }
+}
+
+.container_width {
+  max-width: 1550px;
+  margin: 0px auto;
+
+  // max-height: 144px;
+}
+
+.bannerTop {
+  margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  .heading_section3 {
+    color: #002b6b !important;
+    font-weight: 500;
+    font-size: larger;
+  }
+
+  .container {
+    display: flex;
+    /* margin-top: 40px; */
+    /* margin-top: 52px; */
+    height: 50px;
+  }
+
+  //   .productdiv33 {
+  //     margin-top: 200px;
+  //   }
+
+  .flexSection {
+    display: grid;
+    /* justify-content: center; */
+    gap: 19px;
+    grid-template-columns: repeat(2, 1fr);
+
+    font-weight: 100;
+    padding: 0 10px;
+    h2 {
+      font-weight: 400;
+      color: #504f4f;
+      font-size: 11px;
+    }
+  }
+
+  .flexSection1 {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-direction: column;
+    border: 1px solid #5dc5e9;
+    border-radius: 7px;
+    padding: 20px 42px;
+    min-width: 100%;
+    min-height: 0px;
+    margin-top: 10px;
+    box-shadow: 0px 2px 10px rgb(151 151 151 / 68%);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.absolutePart {
+  position: absolute;
+
+  max-width: 50%;
+  left: 21px;
+  top: 7px;
+
+  h1 {
+    font-size: 12px;
+    color: #002b6b;
+    font-weight: 500;
+    position: absolute;
+  }
+}
+
+.flexSection1 {
+  display: flex;
+  gap: 2px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flexSection1 {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  flex-direction: column;
+  border: 1px solid #5dc5e9;
+  border-radius: 7px;
+  padding: 0;
+  // min-width: 100%;
+  // min-height: 100%;
+  margin-top: 10px;
+  box-shadow: 0px 2px 10px rgb(151 151 151 / 68%);
+  transition: all 0.3s ease-in-out;
+}
+.topHeading {
+  color: #707070;
+  text-align: center;
+  font-weight: 400;
+  /* margin-bottom: 40px; */
+  /* margin-top: 30px; */
+  font-size: 17px;
+  margin: 10px 0;
+}

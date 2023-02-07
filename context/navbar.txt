@@ -1,0 +1,24 @@
+// import React from "react";
+
+// const init = {
+//   show: false,
+// };
+
+// export const NavbarContext = React.createContext<Partial<{}>>({});
+// const NavbarProvider = ({ children }: React.PropsWithChildren<{}>) => {
+//   const [navbar, setnavbar] = React.useState(init);
+//   const onNavbar = React.useCallback((value: boolean) => {
+//     setnavbar({
+//       ...navbar,
+//       show: value,
+//     });
+//   }, []);
+
+//   return (
+//     <NavbarContext.Provider value={{ navbar, onNavbar }}>
+//       {children}
+//     </NavbarContext.Provider>
+//   );
+// };
+
+// export default NavbarProvider;

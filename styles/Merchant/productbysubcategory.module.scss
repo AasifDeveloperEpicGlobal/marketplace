@@ -1,0 +1,229 @@
+.cardproduct:hover,
+.cardproduct:active {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+  // margin-bottom: 20px;
+}
+
+.merchantBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container_width {
+  max-width: 1550px;
+  margin: 0px auto;
+}
+.cardproduct {
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 15px 20px 15px;
+  max-width: 220px;
+  width: 250px;
+  transition: all 100ms ease-in;
+  border: 1px solid #adacac57;
+  .productimg {
+    width: 100%;
+    text-align: center;
+    height: 166px;
+    object-fit: fill;
+    .productimagesrc {
+      max-height: 200px;
+      max-width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+  }
+
+  .productcontent {
+    width: 100%;
+    text-align: center;
+    h4 {
+      line-height: 1em;
+      text-transform: capitalize;
+      font-size: 14px;
+      color: #002b6b;
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1; /* number of lines to show */
+      line-clamp: 1;
+      -webkit-box-orient: vertical;
+      margin: 10px 2px !important;
+    }
+    p {
+      margin: 0px 0px 10px 0px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      -webkit-box-orient: vertical;
+      font-size: 12px;
+    }
+  }
+  .productcartbtn {
+    width: 100%;
+  }
+  button {
+    width: 100%;
+    border: none;
+    background-color: #002b6b;
+    font-weight: 400;
+    border: 0;
+
+    cursor: pointer;
+    font-family: inherit;
+    padding: 1em;
+    transition: all 0.3s linear;
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+.cardproduct33 {
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 15px 20px 15px;
+  max-width: 220px;
+  width: 250px;
+  transition: all 100ms ease-in;
+  border: 1px solid #0000002e;
+  .productimg {
+    width: 100%;
+    text-align: center;
+    // height: 166px;
+    .productimagesrc {
+      max-height: 200px;
+      max-width: 200px;
+      height: 200px;
+      margin: 20px 0 !important;
+      object-fit: contain;
+    }
+  }
+
+  .productcontent {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    h4 {
+      line-height: 1em;
+      text-transform: capitalize;
+      font-size: 14px;
+      color: #002b6b;
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1; /* number of lines to show */
+      line-clamp: 1;
+      -webkit-box-orient: vertical;
+      margin: 10px 2px !important;
+    }
+    p {
+      margin: 0px 0px 10px 0px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+  .productcartbtn {
+    width: 100%;
+    background: #002b6b;
+  }
+  button {
+    width: 100%;
+    border: none;
+    background-color: #002b6b;
+    font-weight: 400;
+    border: 0;
+
+    cursor: pointer;
+    font-family: inherit;
+    padding: 1em;
+    transition: all 0.3s linear;
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+  }
+}
+
+.cardproduct33:hover,
+.cardproduct33:active {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+  // margin-bottom: 20px;
+}
+// .box_height {
+//   max-height: 50vh;
+// }
+.heading_section3 {
+  color: #002b6b !important;
+  font-weight: 500;
+  margin: 10px 0px 10px 18px;
+  font-size: 24px;
+}
+
+.sliderouter {
+  margin: 0 -20px;
+}
+
+@media (max-width: 600px) {
+  .cardproduct {
+    .productimg {
+      width: 100%;
+      text-align: center;
+      height: 150px;
+    }
+  }
+
+  .heading_section3 {
+    color: #002b6b !important;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .cardproduct {
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 11px 15px 20px 15px;
+    max-width: 160px;
+    width: 250px;
+    transition: all 100ms ease-in;
+  }
+
+  .merchantBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
+    justify-items: center;
+  }
+
+  .cardproduct33 {
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 15px 20px 15px;
+    max-width: 163px;
+    width: 250px;
+    transition: all 100ms ease-in;
+  }
+}
