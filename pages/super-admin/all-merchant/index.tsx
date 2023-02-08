@@ -298,7 +298,8 @@ const All_merchant: NextPage = () => {
             </div>
           </div>
 
-          {/* <div className={styles.topTable}>
+          {/* Mobile responsive table  */}
+          <div className={styles.topTable}>
             <div className={styles.tableBoxx}>
               <div>All Merchant</div>
               <div className={styles.arrowBox}>
@@ -444,7 +445,7 @@ const All_merchant: NextPage = () => {
                   </div>
                 );
               })}
-          </div> */}
+          </div>
         </div>
       </SuperAdminLayout>
     </div>
